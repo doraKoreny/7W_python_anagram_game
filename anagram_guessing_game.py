@@ -23,6 +23,8 @@ def get_user_input(shuffled_word):
 def user_guessing(user_input, w):
     if user_input == w:
         return "Correct"
+    else:
+        return ""
 
 
 def main():
@@ -31,10 +33,12 @@ def main():
     shuffled_word = make_anagram(chosen_word)
     ask = get_user_input(shuffled_word)
     print(ask)
-    print(str("Guess the color word!"))
-    answer = input()
-    user_guess = user_guessing(answer, chosen_word)
-    print(user_guess)
+    answer = ""
+    while answer != chosen_word:
+        print(str("Guess the color word!"))
+        answer = input()
+        user_guess = user_guessing(answer, chosen_word)
+        print(user_guess)
 
 
 if __name__ == '__main__':
