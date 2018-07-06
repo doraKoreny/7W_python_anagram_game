@@ -22,9 +22,7 @@ def get_user_input(shuffled_word):
 
 def user_guessing(user_input, w):
     if user_input == w:
-        return "Correct"
-    else:
-        return ""
+        print("Correct")
 
 
 def main():
@@ -38,7 +36,6 @@ def main():
         print(str("Guess the color word!"))
         answer = input()
         user_guess = user_guessing(answer, chosen_word)
-        print(user_guess)
 
 
 if __name__ == '__main__':
